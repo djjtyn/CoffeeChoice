@@ -1,0 +1,14 @@
+.auth_wrapper {
+    display: block;
+    text-align: center;
+}/*Styling for the auth forms wrappers to allow forms to be centred */
+
+.auth_form {
+    display: inline-block;
+    width: 40%;
+    margin: 50px auto;
+    text-align: center;
+    border: 1px solid blue;
+    background-color: black;
+    color: white;
+}/*Styling for the login and registration forms  */
