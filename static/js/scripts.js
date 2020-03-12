@@ -7,7 +7,7 @@ function initMap() {
     var marker = new google.maps.Marker({
     position: location,
     map: map,
-    title: 'Hello World!'
+    title: 'Our Location'
   });
 }
 
