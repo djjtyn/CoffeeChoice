@@ -1,3 +1,9 @@
+/*GENERIC FOR ALL PAGES*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*AUTH FORMS*/
 .auth_wrapper {
     display: block;
     text-align: center;
@@ -12,3 +18,9 @@
     background-color: black;
     color: white;
 }/*Styling for the login and registration forms  */
+
+/*FOOTER*/
+#map {
+    width: 100%;
+    height: 260px;
+}
