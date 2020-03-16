@@ -21,7 +21,8 @@
 
 /*FOOTER*/
 footer{
-    height: 500px;
+    height: 420px;
+    width: 100%;
     background-color: blue;
 }
 .mapdiv {
