@@ -1,6 +1,10 @@
-.index-icons .fas {
-    text-align: center;
-   color: red;
+/*Generic Styling*/
+body {
+    background-color: black;
+}
+
+* {
+    
 }
 /*AUTH FORMS*/
 .auth_wrapper {
@@ -43,6 +47,19 @@ footer{
 .slide img {
     width: 100%;
     height: 600px;
+}
+
+.index-icons {
+    background-color: black;
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    padding: 15px;
+}
+
+.fa-index {
+    text-align: center;
+    font-size: 95px;
 }
 
     
