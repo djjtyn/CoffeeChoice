@@ -1,7 +1,6 @@
-/*GENERIC FOR ALL PAGES*/
-* {
-    margin: 0;
-    padding: 0;
+.index-icons .fas {
+    text-align: center;
+   color: red;
 }
 /*AUTH FORMS*/
 .auth_wrapper {
@@ -46,16 +45,4 @@ footer{
     height: 600px;
 }
 
-.sl-effect {
-    animation-name: effect;
-    animation-duration: 1s;
-}
-    @keyframes sl-effect {
-       from {
-           opacity: 0.3;
-       } 
-       to {
-           opacity: 1;
-       }
-    }
     

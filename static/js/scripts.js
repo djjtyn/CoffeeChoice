@@ -30,7 +30,7 @@ function show(){
         index = 1;
     }
     slides[index-1].style.display = "block";
-    setTimeout(show,1500);
+    setTimeout(show,3500);
 }
 
   
