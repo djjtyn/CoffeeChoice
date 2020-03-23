@@ -35,3 +35,27 @@ footer{
     border: 2px solid black;
     margin: 5px;
 }
+
+/*Image Carousel*/
+.slide-container {
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 600px;
+}
+
+.sl-effect {
+    animation-name: effect;
+    animation-duration: 1s;
+}
+    @keyframes sl-effect {
+       from {
+           opacity: 0.3;
+       } 
+       to {
+           opacity: 1;
+       }
+    }
+    
