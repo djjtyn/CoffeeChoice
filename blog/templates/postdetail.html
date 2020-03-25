@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-2 col-sm-3 text-center">
+            <a class="story-img" href="#">
+                <img src="/media/img/profile.jpeg"  class="img-circle">
+            </a>
+            <p><span><strong> Author:</strong></span> Dave</p>
+        </div>
+        <div class="col-sm-10 col-md-9">
+            {% if post.image %}
+                <img class="img-blogpost" src="/media/{{ post.image }}">
+            {% endif %}
+            <h3>{{ post.title }}</h3>
+            <div class="row">
+                <div class="col-xs-9">
+                    <p>{{ post.content }}</p>
+                    <p><span><strong>Published on:</strong></span> {{ post.published_date }} </p>
+                    <p><span><strong>Views:</strong></span> {{post.views}}</p>
+                    <p><span><strong>Tag:</strong></span> {{ post.tag }}</p>
+                    <a href="{% url 'all_posts' %}" class="btn btn-primary">Back to Blog</a>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
