@@ -20,5 +20,5 @@ class Coffee(models.Model):
     name = models.CharField(max_length=40, blank=False)
     intensity = models.ForeignKey(Intensity,default=1, on_delete=models.CASCADE)
     description = models.TextField()
-    image = models.ImageField(upload_to='images')
+    image = models.ImageField(upload_to='img')
     coffee_range = models.ForeignKey(Range, default=1, on_delete=models.CASCADE)
