@@ -23,9 +23,7 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto">
         {% if user.is_authenticated %}
-        <li class="nav-item active">
-          <a class="nav-link" href="{% url 'profile' %}">Profile <span class="sr-only">(current)</span></a>
-        </li>
+        
         <li class="nav-item">
           <a class="nav-link" href="{% url 'logout' %}">Logout</a>
         </li>
@@ -38,7 +36,7 @@
         </li>
         {% endif %}
          <li class="nav-item">
-          <a class="nav-link" href="#">Coffee</a>
+          <a class="nav-link" href="{% url 'all_coffee' %}">Coffee</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'all_posts' %}">Blog</a>
@@ -51,10 +49,13 @@
     </div>
   </nav>
     {% if messages %}
-    <div>
+    <div class="text-center messages">
         {% for message in messages %} {{ message }} {% endfor %}
     </div>
-    {% endif %} {% block content %}{% endblock %}
+    {% endif %} 
+    <div class="container">
+    {% block content %}{% endblock %}
+    </div>
   <footer>
   <div class="row">
     <div class="col-md-4">

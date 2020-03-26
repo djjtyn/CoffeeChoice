@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row text-center">
+                <div>
+                  <img src="/media/{{ coffee.image }}" class="img-blogpost"/>
+                </div>
+                </div>
+                <div class="row">
+                <h3>{{ coffee.name }}</h3>
+                <p class="product-description">{{ coffee.description }}</p>
+                <p>{{ coffee.price }}</p>
+                <a href="{% url 'all_coffee' %}" class="btn btn-primary">All Coffee</a>
+</div>
+
+</div>
+{% endblock %}

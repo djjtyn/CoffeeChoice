@@ -1,7 +1,22 @@
-{% extends 'base.html %}
-{% block content %}
-<h1>Testing</h1>
-{% for coffee in all_coffee %}
+{% extends 'base.html' %}
 
-{% endfor %}
+{% block content %}
+<div class="row row-flex">
+    {% for coffee in all_coffee %}
+        <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
+            <div class="panel-body">
+                <div>
+                  <img src="/media/{{ coffee.image }}" class="img-circle"/>
+                </div>
+
+                <h3>{{ coffee.name }}</h3>
+                <p class="product-description">{{ coffee.description }}</p>
+                <p>{{ coffee.price }}</p>
+                <p><a href="{% url 'coffee_detail' coffee.id %}"  class="btn btn-primary">Full Overview</a></p>
+
+                
+            </div>
+        </div>
+    {% endfor %}
+</div>
 {% endblock %}

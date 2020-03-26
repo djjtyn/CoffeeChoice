@@ -21,4 +21,5 @@ class Coffee(models.Model):
     intensity = models.ForeignKey(Intensity,default=1, on_delete=models.CASCADE)
     description = models.TextField()
     image = models.ImageField(upload_to='img')
+    price = models.DecimalField(max_digits=6, decimal_places=2)
     coffee_range = models.ForeignKey(Range, default=1, on_delete=models.CASCADE)

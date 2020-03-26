@@ -3,6 +3,7 @@ from .models import Range, Intensity, Coffee
 
 # Create your views here.
 def all_coffee(request):
+    all_coffee = Coffee.objects.all()
     return render(request,'all_coffee.html', {'all_coffee':all_coffee})
 
 """A view that returns a single coffee page based on the coffee ID rendered to the 'postdetail.html' template"""
