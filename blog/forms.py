@@ -7,7 +7,7 @@ class BlogPostForm(forms.ModelForm):
         fields = ('title', 'content', 'image', 'tag', 'published_date')
 
 class CommentForm(forms.ModelForm):
+
     class Meta:
         model = Comment
-        fields = ('name', 'email', 'body')
-        
+        fields = ('author', 'text',)
