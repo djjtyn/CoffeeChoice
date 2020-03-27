@@ -41,6 +41,14 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'all_posts' %}">Blog</a>
         </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'view_cart' %}">
+          <i class="fa fa-shopping-cart"></i>Cart
+                            {% if product_count > 0 %}
+                            <label class="badge badge-warning">{{ product_count }}</label>
+                            {% endif %}
+                        </a>
+                    </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search">
