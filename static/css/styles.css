@@ -1,7 +1,23 @@
 /*Generic Styling*/
+/*Font family for the body*/
 body {
   font-family: Arial, 'sans-seriff';
 }
+
+/*Styling for the number of items in cart*/
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    border-radius: 66%;
+    line-height: 20px;
+}
+
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
 
 /*MESSAGES*/
 .messages {
@@ -65,6 +81,8 @@ footer{
     border: 2px solid black;
     margin: 5px;
 }
+
+
 
 /*Image Carousel*/
 .slide-container {
