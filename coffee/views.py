@@ -12,15 +12,15 @@ def coffee_detail(request, pk):
     coffee = get_object_or_404(Coffee, pk=pk)
     return render(request, 'coffeedetail.html', {'coffee': coffee})
 
-def add_comment_to_post(request, pk):
-    post = get_object_or_404(Coffee, pk=pk)
-    if request.method == "POST":
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            comment = form.save(commit=False)
-            comment.post = post
-            comment.save()
-            return redirect(coffee_detail, post.pk)
-    else:
-        form = CommentForm()
-    return render(request, 'add_comment_to_post.html', {'form': form})
+# def add_comment_to_post(request, pk):
+#     post = get_object_or_404(Coffee, pk=pk)
+#     if request.method == "POST":
+#         form = CommentForm(request.POST)
+#         if form.is_valid():
+#             comment = form.save(commit=False)
+#             comment.post = post
+#             comment.save()
+#             return redirect(coffee_detail, post.pk)
+#     else:
+#         form = CommentForm()
+#     return render(request, 'add_comment_to_post.html', {'form': form})
