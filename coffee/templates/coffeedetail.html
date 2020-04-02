@@ -18,7 +18,7 @@
     </div>
     <a href="{% url 'all_coffee' %}" class="btn btn-primary"><i class="fas fa-undo"></i></a>
 </div>
-
+<a class="btn btn-primary" href="{% url 'add_comment_to_coffee' pk=coffee.pk %}">Add Review</a>
 
 {% for comment in comments %}
     <div class="comment">

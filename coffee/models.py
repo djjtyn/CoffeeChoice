@@ -29,7 +29,7 @@ class Coffee(models.Model):
         return self.name
 
 class Comment(models.Model):
-    Coffee = models.ForeignKey('Coffee', on_delete=models.CASCADE, related_name='comments')
+    coffee = models.ForeignKey('Coffee', on_delete=models.CASCADE, related_name='comments')
     author = models.CharField(max_length=200, default='User')
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
