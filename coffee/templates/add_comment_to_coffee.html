@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
  <div class="auth_wrapper">
-    <h1>New comment</h1>
+    <h1>Add Review</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i></button>
