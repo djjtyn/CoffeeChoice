@@ -25,6 +25,9 @@ class Coffee(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     coffee_range = models.ForeignKey(Range, default=1, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.name
+
 class Comment(models.Model):
     Coffee = models.ForeignKey('Coffee', on_delete=models.CASCADE, related_name='comments')
     author = models.CharField(max_length=200, default='User')

@@ -1,18 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="row">
-  <img src="/media/{{ coffee.image }}" class="img-blogpost"/>
+
+<div class="row ">
+  <div>
+    <img src="/media/{{ coffee.image }}" class="img-blogpost"/>
+  </div>
 </div>
 <div class="row">
   <h3>{{ coffee.name }}</h3>
 </div>
-<p>{{ coffee.description }}</p>
-                <p>{{ coffee.price }}</p>
-                <a href="{% url 'all_coffee' %}" class="btn btn-primary">All Coffee</a>
-                <hr>
-<!-- <a class="btn btn-primary" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a> -->
-{% for comment in post.comments.all %}
+<div class="row">
+    <p>{{ coffee.description }}</p>
+    </div>
+    <div class="row">
+    <p>{{ coffee.price }}</p>
+    </div>
+    <a href="{% url 'all_coffee' %}" class="btn btn-primary"><i class="fas fa-undo"></i></a>
+</div>
+
+
+{% for comment in comments %}
     <div class="comment">
         <div class="date">{{ comment.created_date }}</div>
         <strong>{{ comment.author }}</strong>
@@ -21,4 +29,5 @@
 {% empty %}
     <p>Be the first to add a comment!</p>
 {% endfor %}
+
 {% endblock %}
