@@ -2,9 +2,7 @@
 {% block page_title %}Home Page{% endblock %}
 {% block page_heading %}Home{% endblock %}
 {% block content %}
-
-    <h1 class="text-center">CoffeeChoice</h1>
-
+  <h1 class="text-center">CoffeeChoice</h1>
   <div class="row">
     <div class="col-sm-12 slide-container">
       <div class="slide sl-effect">
@@ -25,20 +23,24 @@
     <div class="col-sm-12 col-md-4">
       <div class="card index-icons">
         <div class="fa-index">
-          <i class="fas fa-mug-hot"></i>
+          <a href="{% url 'all_coffee' %}">
+            <i class="fas fa-coffee"></i>
+          </a>
         </div>
         <div class="card-body">
-          <a class="card-title" href="{% url 'all_coffee' %}">Browse</a>
+          <h5 class="card-title">Browse</h5>
           <p class="card-text">Browse and purchase our selection of great Nespresso Coffee!</p>
         </div>
       </div>
     </div>
     <div class="col-sm-12 col-md-4">
       <div class="card index-icons"">
-      <div class="fa-index">
-  <i class="far fa-eye "></i>
-  </div>
-  <div class="card-body">
+        <div class="fa-index">
+        <a href="{% url 'all_posts' %}">
+          <i class="far fa-eye "></i>
+        </a>
+      </div>
+      <div class="card-body">
     <h5 class="card-title">Coffee Blog</h5>
     <p class="card-text">Keep up to date with our Coffee Blog!</p>
   </div>
@@ -46,12 +48,14 @@
     </div>
     <div class="col-sm-12 col-md-4">
       <div class="card index-icons">
-      <div class="fa-index">
- <i class="fas fa-lock "></i>
+        <div class="fa-index">
+        <a href="https://stripe.com/ie" target="_blank">
+          <i class="fas fa-lock "></i>
+        </a>
  </div>
   <div class="card-body">
     <h5 class="card-title">Secure</h5>
-    <p class="card-text">Our payment service is very secure.</p>
+    <p class="card-text">We use Stripe for all payments made on the site!</p>
   </div>
 </div>
     </div>

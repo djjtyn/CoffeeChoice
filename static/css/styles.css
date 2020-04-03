@@ -2,23 +2,31 @@
 /*Font family for the body*/
 body {
   font-family: Arial, 'sans-seriff';
+  min-height: 100%;
 }
 
-/*Navbar*/
-.fa-mug-hot {
+.main-container {
+    min-height: 80vh;
+}
+
+
+/*NAVBAR*/
+/*Font size, cursor and color transition settings for navbar branding*/
+.navbar-brand .fa-mug-hot {
     font-size: 32px;
     transition-duration: .5s;
     transition-timing-function: ease-in-out;
     cursor: pointer;
-   transform: translateY(-3px);
-}/*Font size and color transition settings for navbar branding*/
+    transform: translateY(-3px);
+}
 
+/*color and scale changes*/
 .fa-mug-hot:hover {
     color: red;
     transform: scale(1.1)
 }
 
-
+/*font-size for navbar headings*/
 .navbar .nav-item {
    font-size: 25px;
 }
@@ -86,26 +94,32 @@ body {
 
 /*FOOTER*/
 footer{
-    height: 420px;
-    width: 100%;
+   
+    margin-top: auto;
     background-color: blue;
+    
 }
+
+
 .mapdiv {
    height: 250px;
    text-align: center;
+   
 
 }
 #map {
     height: 100%;
     border: 2px solid black;
     margin: 5px;
+    overflow: hidden;
 }
 
 
-
+/*INDEX.HTML*/
 /*Image Carousel*/
 .slide-container {
     position: relative;
+    margin: 10px;
 }
 
 .slide img {
