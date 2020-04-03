@@ -4,6 +4,25 @@ body {
   font-family: Arial, 'sans-seriff';
 }
 
+/*Navbar*/
+.fa-mug-hot {
+    font-size: 32px;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+   transform: translateY(-3px);
+}/*Font size and color transition settings for navbar branding*/
+
+.fa-mug-hot:hover {
+    color: red;
+    transform: scale(1.1)
+}
+
+
+.navbar .nav-item {
+   font-size: 25px;
+}
+
 /*Styling for the number of items in cart*/
 .badge {
     padding-left: 9px;
@@ -95,6 +114,8 @@ footer{
 }
 
 .index-icons {
+    height: 300px;
+    width: auto;
     background-color: black;
     color: white;
     font-weight: lighter;
