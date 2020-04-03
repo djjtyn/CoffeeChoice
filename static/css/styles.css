@@ -94,7 +94,7 @@ body {
 
 /*FOOTER*/
 footer{
-   
+    height: 100%;
     margin-top: auto;
     background-color: blue;
     
@@ -135,12 +135,28 @@ footer{
     font-weight: lighter;
     text-align: center;
     padding: 15px;
+    margin: 10px;
+}
+
+.fa-coffee,.fa-eye,.fa-lock{
+    color: white;
+    background: black;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out
+}
+.fa-coffee:hover,
+.fa-eye:hover,
+.fa-lock:hover {
+    color: blue;
+    transform: scale(1.1);
 }
 
 .fa-index {
     text-align: center;
     font-size: 95px;
 }
+
+
 
 /*ALL_COFFEE.HTML*/
 .card {
