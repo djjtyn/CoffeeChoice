@@ -14,6 +14,7 @@
           <p class="product-description">{{ item.product.description }}</p>
           <p>{{ item.coffee.price}}</p>
           <p>Amount: {{ item.quantity }}</p>
+          <h4>Amend QTY</h4>
           <form action="{% url 'adjust_cart' item.id %}" method="post">
             {% csrf_token%}
             <div class="input-group">
