@@ -4,7 +4,7 @@
 {% block content %}<!--Login Form with password reset link-->
   <div class="auth_wrapper">
     <form action="" method="post" class="auth_form">
-      <h1>User Login</h1>
+      <h1>Login</h1>
       {% csrf_token %}
       {{ login_form | as_bootstrap}} 
       <button type="submit" class="btn btn-primary">Login</button> 
