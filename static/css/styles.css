@@ -94,27 +94,25 @@ body {
 
 /*FOOTER*/
 footer{
-    height: auto;
     margin-top: auto;
     background-color: #057af9;
+    color: white;
 }/*Sets the height,margin and background color*/
 
 .footer-social li {
     display: inline;
+    color: white;
 }
 
-
-.mapdiv {
-   height: 250px;
-   text-align: center;
-   
-
-}
 #map {
-    height: 100%;
+    margin: 35px;
+    height: 250px;
     border: 2px solid black;
-    margin: 5px;
-    overflow: hidden;
+}
+
+.footer-text {
+    padding: 10px;
+    margin: 10px;
 }
 
 
