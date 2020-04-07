@@ -94,14 +94,32 @@ body {
 
 /*FOOTER*/
 footer{
-    margin-top: auto;
     background-color: #057af9;
     color: white;
+    width: 100%;
 }/*Sets the height,margin and background color*/
 
+.footer-social {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-bottom: 0;
+}
 .footer-social li {
     display: inline;
     color: white;
+    font-size: 20px;
+}
+
+.fa-facebook-f, .fa-twitter, .fa-pinterest, .fa-youtube{
+    color: white;
+}
+
+.fa-facebook-f:hover, 
+.fa-twitter:hover, 
+.fa-pinterest:hover, 
+.fa-youtube:hover {
+    color: #057af9;
 }
 
 #map {
@@ -112,8 +130,8 @@ footer{
 
 .footer-text {
     padding: 10px;
-    margin: 10px;
-    text-align: left;
+    margin: 35px;
+    text-align: center;
 }
 
 
