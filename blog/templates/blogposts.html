@@ -4,21 +4,20 @@
     <div class="row blog-border">
       <div class="col-lg-2 col-sm-3">
         <img src="/media/img/profile.jpeg" class="img-circle">
-        <p><strong>Author:</strong>Dave</p>
+        <h5><strong>Author:</strong>Dave</h5>
       </div>
-            <div class="col-lg-10 col-sm-9">
-                <h3>{{ post.title }}</h3>
-                <div class="row">
-                    <div class="col-xs-9">
-                        <p>{{ post.content|truncatewords:30 }}</p>
-                        <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
-                        <p><span class="boldtext">Views:</span> {{post.views}}</p>
-                        <p><span class="boldtext">Tag:</span> {{ post.tag }}</p>
-                        <p><a href="{% url 'post_detail' post.id %}"  class="btn btn-primary">Read more</a></p>
-                    </div>
-                </div>
-            </div>
-            <hr>
+      <div class="col-lg-10 col-sm-9">
+        <h3><u>{{ post.title }}</u></h3>
+        <div class="row">
+          <div class="col-xs-12">
+            <p>{{ post.content|truncatewords:30 }}</p>
+            <p><strong>Published:</strong> {{ post.published_date }} </p>
+            <p><strong>Views:</strong> {{post.views}}</p>
+            <p><strong>Tag(s):</strong> {{ post.tag }}</p>
+            <p><a href="{% url 'post_detail' post.id %}"  class="btn btn-primary">Read more</a></p>
+          </div>
         </div>
+      </div>
+    </div>
     {% endfor %}
 {% endblock %}
