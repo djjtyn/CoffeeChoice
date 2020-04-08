@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
 from .forms import BlogPostForm, CommentForm
+
 
 """A view to allow user to see all blog posts published previously rendered to the 'blogposts.html' template"""
 def all_posts(request):
@@ -16,7 +18,8 @@ def post_detail(request, pk):
     post.save()
     return render(request, 'postdetail.html', {'post': post, 'comments': comments})
 
-
+"""A view that allows a user to comment on individual blog posts. Login required for this"""
+@login_required
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":

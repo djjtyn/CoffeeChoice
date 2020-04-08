@@ -32,14 +32,16 @@
 </div> 
 <a class="btn btn-primary center-btn-add" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
      
-
+<div class="comment-wrap">
 {% for comment in comments %}
+
     <div class="comment">
-        <div class="date"><strong>{{ comment.published_date }}</strong></div>
+        <p><strong>{{ comment.published_date }}</strong></p>
         <p><strong>Posted by:</strong> {{ comment.author }}</p>
         <p>{{ comment.text|linebreaks }}</p>
     </div>
 {% empty %}
     <p>Be the first to add a comment!</p>
 {% endfor %}
+<div class="comment-wrap">
 {% endblock %}

@@ -111,7 +111,13 @@ body {
 
 /*USER COMMENTS*/
 .comment {
-    border: black 2px solid;
+    border: black 1px solid;
+    padding: 10px;
+    
+}
+
+.comment-wrap {
+    margin-bottom: 15px;
 }
 /*AUTH FORMS*/
 .auth_wrapper {
