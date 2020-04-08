@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 # Create your models here.
 """Class below for a single blog post"""
@@ -17,7 +18,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comments')
-    author = models.CharField(max_length=200, default='User')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     text = models.TextField()
     published_date = models.DateTimeField(default=timezone.now)
 
