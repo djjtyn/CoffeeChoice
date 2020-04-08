@@ -9,10 +9,10 @@ def all_coffee(request):
     return render(request,'all_coffee.html', {'all_coffee':all_coffee})
 
 """A view that returns a single coffee page based on the coffee ID rendered to the 'postdetail.html' template"""
-def coffee_detail(request, pk):
+def coffee_review(request, pk):
     coffee = get_object_or_404(Coffee, pk=pk)
     comments = Comment.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
-    return render(request, 'coffeedetail.html', {'coffee': coffee, 'comments': comments})
+    return render(request, 'coffeereview.html', {'coffee': coffee, 'comments': comments})
 
 def add_comment_to_coffee(request, pk):
     coffee = get_object_or_404(Coffee, pk=pk)
@@ -21,8 +21,9 @@ def add_comment_to_coffee(request, pk):
         if form.is_valid():
             comment = form.save(commit=False)
             comment.coffee = coffee
+            comment.author = request.user
             comment.save()
-            return redirect(coffee_detail, coffee.pk)
+            return redirect(coffee_review, coffee.pk)
     else:
         form = CommentForm()
     return render(request, 'add_comment_to_coffee.html', {'form': form})
