@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block page_title %}Blog Post {{post.id}}{% endblock %}
 {% block content %}
 <div class="blog-border">
   <div class="row">
@@ -26,10 +27,10 @@
   </div>
   <div class="row">
     <!--Button to return to all posts list-->
-    <a href="{% url 'all_posts' %}" class="btn btn-primary center-btn"><i class="fas fa-undo"></i></a>
+    <a href="{% url 'all_posts' %}" class="btn btn-primary center-btn-return"><i class="fas fa-undo"></i></a>
   </div>
 </div> 
-<a class="btn btn-primary center-btn" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+<a class="btn btn-primary center-btn-add" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
      
 
 {% for comment in comments %}
