@@ -29,7 +29,10 @@ def login(request):
             if user:
                 messages.success(request, "You have successfully logged in!")
                 auth.login(user=user, request=request)
-                return redirect(reverse('index'))
+                if 'next' in request.POST:
+                    return redirect(request.POST.get('next'))
+                else:
+                    return redirect(reverse('index'))
                 
             else:
                 login_form.add_error(None, "Your username or password is incorrect")
