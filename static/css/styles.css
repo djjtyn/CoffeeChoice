@@ -2,7 +2,6 @@
 /*Font family for the body*/
 body {
   font-family: Arial, 'sans-seriff';
-  min-height: 100%;
 }
 
 .main-container {
@@ -50,11 +49,6 @@ nav {
     line-height: 20px;
 }
 
-.row.row-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
 
 
 /*MESSAGES*/
@@ -149,6 +143,11 @@ footer{
     width: 100%;
 }/*Sets the height,margin and background color*/
 
+.footer-margin {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .footer-social {
     width: 100%;
     text-align: center;
@@ -198,14 +197,16 @@ footer{
 }
 
 .index-icons {
-    height: 300px;
+    height: 390px;
     width: auto;
     background-color: black;
     color: white;
     font-weight: lighter;
     text-align: center;
+    vertical-align: middle;
     padding: 15px;
     margin: 10px;
+    
 }
 
 .fa-coffee,.fa-eye,.fa-lock{
