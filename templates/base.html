@@ -26,14 +26,6 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'logout' %}">Logout</a>
         </li>
-            <li class="nav-item">
-        <a class="nav-link" href="{% url 'view_cart' %}">
-          <i class="fa fa-shopping-cart"></i>Cart
-                            {% if product_count > 0 %}
-                            <label class="badge badge-warning">{{ product_count }}</label>
-                            {% endif %}
-                        </a>
-                    </li>
         {% else %}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'login' %}">Login</a>
@@ -42,6 +34,14 @@
           <a class="nav-link" href="{% url 'register' %}">Register</a>
         </li>
         {% endif %}
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'view_cart' %}">
+          <i class="fa fa-shopping-cart"></i>Cart
+                            {% if product_count > 0 %}
+                            <label class="badge badge-warning">{{ product_count }}</label>
+                            {% endif %}
+                        </a>
+                    </li>
          <li class="nav-item">
           <a class="nav-link" href="{% url 'all_coffee' %}">Coffee</a>
         </li>
@@ -51,7 +51,7 @@
        
       </ul>
       <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" name="query">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search Coffee" name="query">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>

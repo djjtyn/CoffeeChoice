@@ -127,7 +127,6 @@ nav {
 }
 /*AUTH FORMS*/
 .auth_wrapper {
-    display: block;
     text-align: center;
 }/*Styling for the auth forms wrappers to allow forms to be centred */
 
