@@ -8,15 +8,17 @@
       <img src="/media/img/profile.jpeg"  class="img-circle">
       <p><strong> Author:</strong>Dave</p>
     </div>
-    <div class="col-sm-10 col-md-9">
+    <div class="col-sm-9 col-md-10">
       <!--If model has a blog image, it will be posted here-->
       {% if post.image %}
         <img class="img-blogpost" src="/media/{{ post.image }}">
       {% endif %}
+    </div>
+    </div>
       <!--Post title, content, published date, amount of views and tags will all be posted below the blog image-->
       <div class="center-text">
       <h3><u>{{ post.title }}</u></h3>
-      <div class="row">
+    
         <div class="col-xs-9">
         
           <p><span><strong>Published:</strong></span> {{ post.published_date }} </p>
@@ -30,7 +32,7 @@
   </div>
   <div class="row">
     <!--Button to return to all posts list-->
-    <a href="{% url 'all_posts' %}" class="btn btn-primary center-btn"><i class="fas fa-undo"></i></a>
+    <a href="{% url 'all_posts' %}" class="btn btn-primary center-btn-return"><i class="fas fa-undo"></i></a>
   </div>
 </div> 
 <a class="btn btn-primary center-btn-add" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>

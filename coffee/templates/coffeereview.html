@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% block page_title %}{{ coffee.name }}{% endblock %}
 {% block content %}
 <div class="col-sm-12">
 	<div class="card">
@@ -14,7 +15,7 @@
 	</div>
 	<h1 class="center-text">Reviews</h1>
 	<a class="btn btn-primary center-btn-add" href="{% url 'add_comment_to_coffee' pk=coffee.pk %}">Add Review</a>
-
+    <div class="comment-wrap">
 	{% for comment in comments %}
 	<div class="comment">
 		<div>{{ comment.created_date }}</div>
@@ -25,5 +26,6 @@
 		<p>Be the first to add a review!</p>
 	</div>
 	{% endfor %}
+</div>
 </div>
 	{% endblock %}
