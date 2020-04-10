@@ -1,32 +1,26 @@
 {% extends 'base.html' %}
-
 {% block content %}
+<div class="col-sm-12">
+    <div class="card">
+      <img class="card-img-top" src="/media/{{ coffee.image }}" alt="Coffee-Capsule" height="400px">
+      <div class="card-body center-text">
 
-<div class="row ">
-  <div>
-    <img src="/media/{{ coffee.image }}" class="img-blogpost"/>
-  </div>
-</div>
-<div class="row">
-  <h3>{{ coffee.name }}</h3>
-</div>
-<div class="row">
-    <p>{{ coffee.description }}</p>
-    </div>
-    <div class="row">
-    <p>{{ coffee.price }}</p>
-    </div>
+        <h5 class="card-title">{{ coffee.name }}</h5>
+        <p class="card-text">Range: {{ coffee.coffee_range }}</p>
+        <p class="card-text">Intensity: {{ coffee.intensity }}</p>
+        <p class="card-text">{{ coffee.description }}</p>
+        <p><i class="fas fa-euro-sign"></i> {{ coffee.price }}</p>
     <a href="{% url 'all_coffee' %}" class="btn btn-primary"><i class="fas fa-undo"></i></a>
 </div>
-<hr>
-<h1>Reviews</h1>
-<a class="btn btn-primary" href="{% url 'add_comment_to_coffee' pk=coffee.pk %}">Add Review</a>
+</div>
+<h1 class = "center-text">Reviews</h1>
+<a class="btn btn-primary center-btn-add" href="{% url 'add_comment_to_coffee' pk=coffee.pk %}">Add Review</a>
 
 {% for comment in comments %}
     <div class="comment">
-        <div class="date">{{ comment.created_date }}</div>
-        <strong>{{ comment.author }}</strong>
-        <p>{{ comment.text|linebreaks }}</p>
+        <div>{{ comment.created_date }}</div>
+        <p><strong>{{ comment.author }}</strong></p>
+        <p>{{ comment.text }}</p>
     
 {% empty %}
     <p>Be the first to add a review!</p>

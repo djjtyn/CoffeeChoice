@@ -13,10 +13,16 @@ body {
     text-align: center;
 }
 
-
+.card-body {
+    text-align: center;
+}
 
 /*NAVBAR*/
 /*Font size, cursor and color transition settings for navbar branding*/
+
+nav {
+    margin-bottom: 20px;
+}
 .navbar-brand .fa-mug-hot {
     font-size: 32px;
     transition-duration: .5s;
@@ -123,8 +129,9 @@ body {
 .auth_wrapper {
     display: block;
     text-align: center;
-    
 }/*Styling for the auth forms wrappers to allow forms to be centred */
+
+
 
 .auth_form {
     display: inline-block;
@@ -224,7 +231,11 @@ footer{
 
 /*ALL_COFFEE.HTML*/
 .card {
-    margin: 10px 0;
+    margin: 25px;
+}
+
+/*COFFEEREVIEW.HTML*/
+
 }
 
     

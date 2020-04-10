@@ -3,7 +3,7 @@
 {% load bootstrap_tags %}
 
 {% block content %}
-<h1>Your Cart</h1>
+<h1 class="center-text">Your Cart</h1>
   <div class="row row-flex">
     {% for item in cart_items %}
     <div class="col-md-4 col-sm-12">
@@ -12,7 +12,7 @@
         <div class="card-body">
           <h3>{{ item.coffee.name }}</h3>
           <p class="product-description">{{ item.product.description }}</p>
-          <p>{{ item.coffee.price}}</p>
+          <p><i class="fas fa-euro-sign"></i> {{ item.coffee.price }}</p>
           <p>Amount: {{ item.quantity }}</p>
           <h4>Amend QTY</h4>
           <form action="{% url 'adjust_cart' item.id %}" method="post">
@@ -29,12 +29,16 @@
     </div>
     {% endfor %}
   </div>
-  <div class="row">
+ 
+  <div class="col-sm-12">
+  <div class="center-text">
     <p>Total:</p>
     <p><i class="fas fa-euro-sign"></i></span> {{ total }}</p>
+
+  </div>
   </div>
   <div>
-     <a href="{% url 'checkout' %}" class="btn btn-success" role="button">
+     <a href="{% url 'checkout' %}" class="btn btn-success center-btn-add" role="button">
       <i class="fas fa-check-circle"></i> Checkout
     </a>
   </div>
