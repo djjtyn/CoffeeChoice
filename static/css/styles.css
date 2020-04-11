@@ -114,11 +114,13 @@ nav {
 .comment {
     border: black 1px solid;
     padding: 10px;
+
     
 }
 
 .comment-wrap {
     margin-bottom: 15px;
+    padding: 15px;
 }
 /*FORMS*/
 .auth_wrapper {
@@ -140,7 +142,6 @@ nav {
 /*Sets the form width to 100% for review and blog comment user forms*/
 textarea {
     min-width: 100%;
-    text-align: center;
 }
 
 /*FOOTER*/

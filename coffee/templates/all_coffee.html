@@ -14,7 +14,7 @@
         <p class="card-text">{{ coffee.description }}</p>
         <p><i class="fas fa-euro-sign"></i> {{ coffee.price }}</p>
         <p><a href="{% url 'coffee_review' coffee.id %}"  class="btn btn-primary">Coffee Review(s)</a></p>
-         <form method="post" class="center-text" action="{% url 'add_to_cart' coffee.id %}">
+         <form method="post" action="{% url 'add_to_cart' coffee.id %}">
                     {% csrf_token %}
                     <div class="input-group">
                         <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
