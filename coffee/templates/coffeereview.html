@@ -3,7 +3,7 @@
 {% block content %}
 <div class="col-sm-12">
 	<div class="card-coffee">
-		<img src="/media/{{ coffee.image }}" alt="Coffee-Capsule" height="400px">
+		<img src="/media/{{ coffee.image }}" class="review-img" alt="Coffee-Capsule" height="400px">
 		<div class="card-body center-text">
 			<h5 class="card-title">{{ coffee.name }}</h5>
 			<p class="card-text">Range: {{ coffee.coffee_range }}</p>
@@ -21,6 +21,7 @@
 		<div>{{ comment.created_date }}</div>
 		<p><strong>{{ comment.author }}</strong></p>
 		<p>{{ comment.text }}</p>
+        
 
 		{% empty %}
 		<p>Be the first to add a review!</p>
