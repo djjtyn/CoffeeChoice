@@ -120,7 +120,7 @@ nav {
 .comment-wrap {
     margin-bottom: 15px;
 }
-/*AUTH FORMS*/
+/*FORMS*/
 .auth_wrapper {
     text-align: center;
 }/*Styling for the auth forms wrappers to allow forms to be centred */
@@ -137,11 +137,18 @@ nav {
     border-radius: 15%;
 }/*Styling for the login and registration forms  */
 
+/*Sets the form width to 100% for review and blog comment user forms*/
+textarea {
+    min-width: 100%;
+    text-align: center;
+}
+
 /*FOOTER*/
 footer{
     background-color: #057af9;
     color: white;
     width: 100%;
+    margin-top: 15px;
 }/*Sets the height,margin and background color*/
 
 .footer-margin {
