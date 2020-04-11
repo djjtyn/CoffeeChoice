@@ -235,6 +235,10 @@ footer{
     margin: 25px;
 }
 
+.card-img-top {
+    height: 250px;
+    width: 100%;
+}
 /*COFFEEREVIEW.HTML*/
 
 }
