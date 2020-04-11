@@ -239,8 +239,10 @@ footer{
 
 
 /*ALL_COFFEE.HTML*/
-.card {
+.card-coffee {
     margin: 25px;
+    background: linear-gradient(315deg, #f3e6e8,#d0ccdb 74%);
+    text-align: center;
 }
 
 .card-img-top {
