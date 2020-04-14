@@ -6,7 +6,9 @@ from django.utils import timezone
 # Create your views here.
 def all_coffee(request):
     all_coffee = Coffee.objects.all()
-    return render(request,'all_coffee.html', {'all_coffee':all_coffee})
+    range = Range.objects.all()
+    intensity = Intensity.objects.all()
+    return render(request,'all_coffee.html', {'all_coffee':all_coffee, 'ranges': range, 'intensity': intensity})
 
 """A view that returns a single coffee page based on the coffee ID rendered to the 'postdetail.html' template"""
 def coffee_review(request, pk):

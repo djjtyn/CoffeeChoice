@@ -252,7 +252,8 @@ footer{
 }
 
 .search input {
-    width: 50%;
+    
+    text-align: center;
 }
 
 .card-coffee {

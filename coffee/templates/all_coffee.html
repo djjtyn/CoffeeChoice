@@ -2,34 +2,62 @@
 {% block page_title %}All Coffee{% endblock %}
 {% block content %}
 <h1 class="center-text">All Coffee</h1>
-   <form class="search" action="{% url 'search' %}" method="get">
-        <input class="" type="text" placeholder="Search Coffee" name="query">
-        <button class="" type="submit">Search</button>
-      </form>
-<div class="row row-flex">
-{% for coffee in all_coffee %}
-  <div class="col-md-4 col-sm-12">
-    <div class="card-coffee">
-      <img class="card-img-top" src="/media/{{ coffee.image }}" alt="Coffee-Capsule">
-      <div class="card-body">
-        <h5 class="card-title">{{ coffee.name }}</h5>
-        <p class="card-text">Range: {{ coffee.coffee_range }}</p>
-        <p class="card-text">Intensity: {{ coffee.intensity }}</p>
-        <p class="card-text">{{ coffee.description }}</p>
-        <p><i class="fas fa-euro-sign"></i> {{ coffee.price }}</p>
-        <p><a href="{% url 'coffee_review' coffee.id %}"  class="btn btn-primary">Coffee Review(s)</a></p>
-         <form method="post" action="{% url 'add_to_cart' coffee.id %}">
-                    {% csrf_token %}
-                    <div class="input-group">
-                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
-                        <span class="input-group-btn">
-                            <button class="btn btn-success" type="submit">Add</button>
-                        </span>
-                    </div>
-                </form>
-      </div>
+<form class="search" action="{% url 'search' %}" method="get">
+  <!--Form Searchbox-->
+  <div class="form-row">
+    <div class="col-sm-12">
+	  <input class="form-control" type="text" placeholder="Search Coffee" name="query">
     </div>
   </div>
-{% endfor %}
+  <!--Form Range and Intensity Dropdowns-->
+  <div class="form-row">
+    <div class="col-sm-12 col-md-6">		
+      <label for="range">Range</label>
+	  <select id="range" class="form-control" name="range">
+        <option selected>Choose...</option>
+        {% for range in ranges %}
+        <option value="{{ range.name }}">{{ range.name }}</option>
+        {% endfor %}
+      </select>
+	</div>
+    <div class="col-sm-12 col-md-6">		
+      <label for="intensity">Intensity</label>
+	  <select id="intensity" class="form-control" name="intensity">
+        <option selected>Choose...</option>
+        {% for unit in intensity %}
+        <option value="{{ unit.intensity }}">{{ unit.intensity }}</option>
+        {% endfor %}
+      </select>
+	</div>
+  </div>
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Search</button>
+  </div>
+</form>
+<div class="row row-flex">
+	{% for coffee in all_coffee %}
+	<div class="col-md-4 col-sm-12">
+		<div class="card-coffee">
+			<img class="card-img-top" src="/media/{{ coffee.image }}" alt="Coffee-Capsule">
+			<div class="card-body">
+				<h5 class="card-title">{{ coffee.name }}</h5>
+				<p class="card-text">Range: {{ coffee.coffee_range }}</p>
+				<p class="card-text">Intensity: {{ coffee.intensity }}</p>
+				<p class="card-text">{{ coffee.description }}</p>
+				<p><i class="fas fa-euro-sign"></i> {{ coffee.price }}</p>
+				<p><a href="{% url 'coffee_review' coffee.id %}" class="btn btn-primary">Coffee Review(s)</a></p>
+				<form method="post" action="{% url 'add_to_cart' coffee.id %}">
+					{% csrf_token %}
+					<div class="input-group">
+						<input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+						<span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">Add</button>
+                        </span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	{% endfor %}
 </div>
 {% endblock %}
