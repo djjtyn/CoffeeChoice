@@ -5,6 +5,7 @@ body {
   background: linear-gradient(rgb(199, 200, 201), rgb(237, 238, 245));
 }
 
+
 .main-container {
     min-height: 40vh;
 }
@@ -17,11 +18,17 @@ body {
     text-align: center;
 }
 
+
+
 /*NAVBAR*/
 /*Font size, cursor and color transition settings for navbar branding*/
 
+.test {
+    justify-content: flex-end;
+}
 nav {
     margin-bottom: 20px;
+    width: 100%;
 }
 .navbar-brand .fa-mug-hot {
     font-size: 32px;
@@ -239,6 +246,15 @@ footer{
 
 
 /*ALL_COFFEE.HTML*/
+.search {
+    width: 100%;
+    text-align: center;
+}
+
+.search input {
+    width: 50%;
+}
+
 .card-coffee {
     margin: 25px;
     background: linear-gradient(315deg, #f3eaec,#d0ccdb 74%);

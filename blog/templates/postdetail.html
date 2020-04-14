@@ -45,8 +45,7 @@
         <p><strong>Posted by:</strong> {{ comment.author }}</p>
         <p>{{ comment.text|linebreaks }}</p>
     </div>
-{% empty %}
+    {% empty %}
     <p>Be the first to add a comment!</p>
 {% endfor %}
-<div class="comment-wrap">
 {% endblock %}

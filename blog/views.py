@@ -13,7 +13,7 @@ def all_posts(request):
 """A view that returns a single blog post based on the post ID. Rendered to the 'postdetail.html' template"""
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    comments = Comment.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    comments = Comment.objects.filter(post = post, published_date__lte=timezone.now()).order_by('-published_date')
     post.views += 1
     post.save()
     return render(request, 'postdetail.html', {'post': post, 'comments': comments})

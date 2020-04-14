@@ -2,6 +2,10 @@
 {% block page_title %}All Coffee{% endblock %}
 {% block content %}
 <h1 class="center-text">All Coffee</h1>
+   <form class="search" action="{% url 'search' %}" method="get">
+        <input class="" type="text" placeholder="Search Coffee" name="query">
+        <button class="" type="submit">Search</button>
+      </form>
 <div class="row row-flex">
 {% for coffee in all_coffee %}
   <div class="col-md-4 col-sm-12">

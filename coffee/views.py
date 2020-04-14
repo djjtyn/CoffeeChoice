@@ -10,13 +10,11 @@ def all_coffee(request):
 
 """A view that returns a single coffee page based on the coffee ID rendered to the 'postdetail.html' template"""
 def coffee_review(request, pk):
-    print(pk)
     coffee = get_object_or_404(Coffee, pk=pk)
     comments = Comment.objects.filter(coffee =coffee, created_date__lte=timezone.now()).order_by('-created_date')
     return render(request, 'coffeereview.html', {'coffee': coffee, 'comments': comments})
 
 def add_comment_to_coffee(request, pk):
-    print(pk)
     coffee = get_object_or_404(Coffee, pk=pk)
     if request.method == "POST":
         form = CommentForm(request.POST)
