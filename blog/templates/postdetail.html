@@ -44,6 +44,7 @@
         <p><strong>{{ comment.published_date }}</strong></p>
         <p><strong>Posted by:</strong> {{ comment.author }}</p>
         <p>{{ comment.text|linebreaks }}</p>
+        <hr>
     </div>
     {% empty %}
     <p>Be the first to add a comment!</p>

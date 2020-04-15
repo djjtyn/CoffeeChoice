@@ -5,11 +5,11 @@
 	<div class="card-coffee">
 		<img src="/media/{{ coffee.image }}" class="review-img" alt="Coffee-Capsule" height="400px">
 		<div class="card-body center-text">
-			<h5 class="card-title">{{ coffee.name }}</h5>
-			<p class="card-text">Range: {{ coffee.coffee_range }}</p>
-			<p class="card-text">Intensity: {{ coffee.intensity }}</p>
-			<p class="card-text">{{ coffee.description }}</p>
-			<p><i class="fas fa-euro-sign"></i> {{ coffee.price }}</p>
+			<h1>{{ coffee.name }}</h1>
+			<h2>Range: {{ coffee.coffee_range }}</h2>
+			<h2>Intensity: {{ coffee.intensity }}</h2>
+			<h2>{{ coffee.description }}</h2>
+			<h3><i class="fas fa-euro-sign"></i> {{ coffee.price }}</h3>
 			<a href="{% url 'all_coffee' %}" class="btn btn-primary"><i class="fas fa-undo"></i></a>
 		</div>
 	</div>
@@ -21,7 +21,7 @@
 			<p>{{ comment.created_date }}</p>
 			<p><strong>{{ comment.author }}</strong></p>
 			<p>{{ comment.text }}</p>
-			
+			<hr>
 		</div>
         {% empty %}
 			<p>Be the first to add a review!</p>
