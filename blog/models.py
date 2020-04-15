@@ -17,8 +17,8 @@ class Post(models.Model):
         return self.title
 
 class Comment(models.Model):
-    post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comments')
-    author = models.ForeignKey(User, related_name='review')
+    post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comment')
+    author = models.ForeignKey(User, related_name='comment')
     text = models.TextField()
     published_date = models.DateTimeField(default=timezone.now)
 
