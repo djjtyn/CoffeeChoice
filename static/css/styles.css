@@ -258,8 +258,10 @@ footer{
 
 .card-coffee {
     margin: 25px;
+    padding:15px;
     background: linear-gradient(rgb(237, 238, 245),rgb(124, 46, 10));
     text-align: center;
+    height:715px;
 }
 
 
@@ -267,7 +269,7 @@ footer{
 .card-img-top {
     height: 250px;
     width: 100%;
-    background-color: inherit;
+    background-color: #d1beb9
 }
 /*COFFEEREVIEW.HTML*/
 .review-img {

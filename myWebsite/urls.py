@@ -10,6 +10,7 @@ from coffee import urls as coffee_urls
 from cart import urls as cart_urls
 from checkout import urls as checkout_urls
 from search import urls as search_urls
+from filters import urls as filter_urls
 from .settings import MEDIA_ROOT
 
 urlpatterns = [
@@ -19,6 +20,7 @@ urlpatterns = [
     url(r'^coffee/', include(coffee_urls)),
     url(r'^cart/', include(cart_urls)),
     url(r'^search/', include(search_urls)),
+    url(r'^filter/', include(filter_urls)),
     url(r'^blog/', include(blog_urls)),
     url(r'^checkout/', include(checkout_urls)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
