@@ -38,7 +38,7 @@
 	{% for coffee in all_coffee %}
 	<div class="col-md-4 col-sm-12">
 		<div class="card-coffee">
-			<img class="card-img-top" src="/media/{{ coffee.image }}" alt="Coffee-Capsule">
+			<img class="card-img-top" src="/media/{{ coffee.image.url }}" alt="Coffee-Capsule">
 			<div class="card-body">
 				<h5 class="card-title">{{ coffee.name }}</h5>
 				<p class="card-text">Range: {{ coffee.coffee_range }}</p>

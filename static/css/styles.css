@@ -153,7 +153,7 @@ textarea {
 
 /*FOOTER*/
 footer{
-    background-color: #057af9;
+    background-color: #343a3f;
     color: white;
     width: 100%;
     margin-top: 15px;
@@ -190,7 +190,7 @@ footer{
 #map {
     margin: 35px;
     height: 250px;
-    border: 2px solid black;
+    border: 2px solid white;
 }
 
 .footer-text {
