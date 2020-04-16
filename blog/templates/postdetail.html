@@ -5,13 +5,13 @@
   <div class="row">
     <!--User Img-->
     <div class="col-md-2 col-sm-3">
-      <img src="/media/img/profile.jpeg"  class="img-circle">
+      <img src="static/img/pods.png"  class="img-circle">
       <p><strong> Author:</strong>Dave</p>
     </div>
     <div class="col-sm-9 col-md-10">
       <!--If model has a blog image, it will be posted here-->
       {% if post.image %}
-        <img class="img-blogpost" src="/media/{{ post.image }}">
+        <img class="img-blogpost" src="{{MEDIA_URL}}{{ post.image }}">
       {% endif %}
     </div>
     </div>
