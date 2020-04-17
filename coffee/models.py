@@ -32,7 +32,7 @@ class Coffee(models.Model):
 class Comment(models.Model):
     coffee = models.ForeignKey(Coffee, on_delete=models.CASCADE, related_name='review')
     author = models.ForeignKey(User, related_name='coffeecomment')
-    text = models.TextField()
+    text = models.TextField(blank=False)
     created_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
