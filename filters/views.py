@@ -5,14 +5,14 @@ from coffee.models import Coffee
 
 
 def filter_vertuo(request):
-    coffee = Coffee.objects(coffee_range =='Vertuo')
+    coffee = Coffee.objects.filter(coffee_range__name ='Vertuo')
     if coffee:
         return render(request, 'all_coffee.html', {'all_coffee': coffee})
     else:
         return render(request, 'no_results.html')
 
 def filter_original(request):
-    coffee = Coffee.objects.filter(coffee_range ='Original')
+    coffee = Coffee.objects.filter(coffee_range__name ='Original')
     if coffee:
         return render(request, 'all_coffee.html', {'all_coffee': coffee})
     else:
