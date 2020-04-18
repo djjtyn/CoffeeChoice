@@ -2,15 +2,17 @@
 {% block page_title %}All Coffee{% endblock %}
 {% block content %}
 <h1 class="center-text">All Coffee</h1>
+<div class="center-text">
 <a href="{% url 'all_coffee' %}">
-<button>All Coffee</button>
+<button class="btn btn-primary">All Coffee</button>
 </a>
 <a href="{% url 'filter_vertuo' %}">
-<button>Vertuo</button>
+<button class="btn btn-primary">Vertuo</button>
 </a>
 <a href="{% url 'filter_original' %}">
-<button>Original</button>
+<button class="btn btn-primary">Original</button>
 </a>
+</div>
 <form class="search" action="{% url 'search' %}" method="get">
   <!--Form Searchbox-->
   <div class="form-row">
