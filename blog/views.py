@@ -3,11 +3,15 @@ from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
 from .forms import BlogPostForm, CommentForm
+from django.core.paginator import Paginator
 
 
 """A view to allow user to see all blog posts published previously rendered to the 'blogposts.html' template"""
 def all_posts(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    paginator = Paginator(posts, 9)
+    page = request.GET.get('page', 1)
+    posts = paginator.page(page)
     return render(request, 'blogposts.html', {'posts': posts })
 
 """A view that returns a single blog post based on the post ID. Rendered to the 'postdetail.html' template"""

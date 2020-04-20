@@ -2,13 +2,17 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Range, Intensity, Coffee, Comment
 from .forms import CommentForm
 from django.utils import timezone
+from django.core.paginator import Paginator
 
 # Create your views here.
 def all_coffee(request):
     all_coffee = Coffee.objects.all()
-    range = Range.objects.all()
-    intensity = Intensity.objects.all()
-    return render(request,'all_coffee.html', {'all_coffee':all_coffee, 'ranges': range, 'intensity': intensity})
+    paginator = Paginator(all_coffee, 9)
+    page = request.GET.get('page', 1)
+    all_coffee = paginator.page(page)
+    
+    
+    return render(request,'all_coffee.html', {'all_coffee':all_coffee})
 
 """A view that returns a single coffee page based on the coffee ID rendered to the 'postdetail.html' template"""
 def coffee_review(request, pk):
