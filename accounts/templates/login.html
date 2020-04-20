@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
 {% load bootstrap_tags %}
 {% block page_title %}Login{% endblock %}
-{% block content %}<!--Login Form with password reset link-->
-  <div class="auth_wrapper">
-    <form action="" method="post" class="auth_form">
-      <h1>Login</h1>
-      {% csrf_token %}
-      {{ login_form | as_bootstrap}} 
-      {% if request.GET.next %}
-        <input type="hidden" name="next" value="{{ request.GET.next }}">
+{% block content %}
+<!--Login Form with password reset link-->
+<div class="auth_wrapper">
+	<form method="post" class="auth_form">
+		<h1>Login</h1>
+		{% csrf_token %}
+		{{ login_form | as_bootstrap}}
+		{% if request.GET.next %}
+		<input type="hidden" name="next" value="{{ request.GET.next }}">
       {% endif %}
-      <p><button type="submit" class="btn btn-primary">Login</button></p>
-      <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
-      <p><a href="{% url 'register' %}">Register for an account</a></p>
-    </form>
-  </div>    
-{% endblock %} 
+		<p><button type="submit" class="btn btn-primary">Login</button></p>
+		<p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
+		<p><a href="{% url 'register' %}">Register for an account</a></p>
+	</form>
+</div>
+{% endblock %}
