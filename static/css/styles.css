@@ -53,7 +53,7 @@ nav {
     transition-duration: .5s;
     transition-timing-function: ease-in-out;
     cursor: pointer;
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
 /*color and scale changes*/
