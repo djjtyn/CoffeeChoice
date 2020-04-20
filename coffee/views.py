@@ -6,7 +6,7 @@ from django.core.paginator import Paginator
 
 # Create your views here.
 def all_coffee(request):
-    all_coffee = Coffee.objects.all()
+    all_coffee = Coffee.objects.all().order_by('name')
     paginator = Paginator(all_coffee, 9)
     page = request.GET.get('page', 1)
     all_coffee = paginator.page(page)
