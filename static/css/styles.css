@@ -13,9 +13,23 @@ body {
     text-align: center;
 }
 
+.pagination {
+    justify-content: center;
+}
+
 .pagination li{
     margin: 2px;
     font-size: 32px;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 60%;
+    color: white;
+    background-color: rgb(124, 46, 10);
+}
+
+.pagination li:hover {
+    background-color: white;
+    color: rgb(124, 46, 10);
 }
 .card-body {
     text-align: center;
@@ -104,8 +118,8 @@ nav {
     width: 40%;
     margin-left: 30%;
     margin-right: 30%;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /*btn to return to blog post listings*/
@@ -281,9 +295,14 @@ footer{
 }
 /*COFFEEREVIEW.HTML*/
 .review-img {
-    width: 100%;
+    width: 70%;
     height: 70%;
+    margin-bottom: 10px;
     background-color: white;
+}
+
+.card-body-review {
+    margin-bottom: 15px;
 }
 
     
