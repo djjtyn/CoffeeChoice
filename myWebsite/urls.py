@@ -11,6 +11,7 @@ from cart import urls as cart_urls
 from checkout import urls as checkout_urls
 from search import urls as search_urls
 from filters import urls as filter_urls
+from orderhistory import urls as history_urls
 from .settings import MEDIA_ROOT
 
 urlpatterns = [
@@ -23,5 +24,6 @@ urlpatterns = [
     url(r'^filter/', include(filter_urls)),
     url(r'^blog/', include(blog_urls)),
     url(r'^checkout/', include(checkout_urls)),
+    url(r'^orderhistory/', include(history_urls)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
 ]
