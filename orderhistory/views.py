@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from checkout.models import OrderLineItem
+from checkout.models import Order
 from django.contrib.auth.models import User
 
 # Create your views here.
 def orderHistory(request):
-    order_history = OrderLineItem.objects.filter(customer__exact = request.user)
+    order_history = Order.objects.filter(full_name = request.user)
     return render(request, 'orderhistory.html', {'order_history': order_history,})

@@ -1,6 +1,6 @@
 from django.db import models
 from coffee.models import Coffee
-from django.contrib.auth.models import User
+
 
 # Create your models here.
 class Order(models.Model):
@@ -21,7 +21,7 @@ class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False)
     coffee = models.ForeignKey(Coffee, null=False)
     quantity = models.IntegerField(blank=False)
-    customer = models.ForeignKey(User, default='testcustomer')
+    
 
     def __str__(self):
         return "{0} {1} @ {2}".format(
