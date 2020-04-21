@@ -58,7 +58,7 @@ nav {
 
 /*color and scale changes*/
 .fa-mug-hot:hover {
-    color: red;
+    color: blue;
     transform: scale(1.1)
 }
 
@@ -243,15 +243,23 @@ footer{
     
 }
 
-.fa-coffee,.fa-eye,.fa-lock{
+/*Home cards and navbar fontawesome icons*/
+.fa-coffee,.fa-eye,.fa-lock, .fa-shopping-cart, 
+.fa-sign-in-alt, .fa-user-plus, .fa-sign-out-alt {
     color: white;
     background: black;
     transition-duration: .5s;
     transition-timing-function: ease-in-out
 }
+
+/*Home cards and navbar fontawesome icons-Hover*/
 .fa-coffee:hover,
 .fa-eye:hover,
-.fa-lock:hover {
+.fa-lock:hover,
+.fa-shopping-cart:hover,
+.fa-sign-in-alt:hover,
+.fa-user-plus:hover,
+.fa-sign-out-alt:hover {
     color: #057af9;
     transform: scale(1.1);
 }

@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Range, Intensity, Coffee, Comment
 from .forms import CommentForm
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 
 # Create your views here.
@@ -20,6 +21,7 @@ def coffee_review(request, pk):
     comments = Comment.objects.filter(coffee =coffee, created_date__lte=timezone.now()).order_by('-created_date')
     return render(request, 'coffeereview.html', {'coffee': coffee, 'comments': comments})
 
+@login_required
 def add_comment_to_coffee(request, pk):
     coffee = get_object_or_404(Coffee, pk=pk)
     if request.method == "POST":
