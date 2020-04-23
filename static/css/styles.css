@@ -247,7 +247,7 @@ footer{
 .fa-coffee,.fa-eye,.fa-lock, .fa-shopping-cart, 
 .fa-sign-in-alt, .fa-user-plus, .fa-sign-out-alt {
     color: white;
-    background: black;
+    background: inherit;
     transition-duration: .5s;
     transition-timing-function: ease-in-out
 }
@@ -260,7 +260,7 @@ footer{
 .fa-sign-in-alt:hover,
 .fa-user-plus:hover,
 .fa-sign-out-alt:hover {
-    color: #057af9;
+    color: #fac136;
     transform: scale(1.1);
 }
 
