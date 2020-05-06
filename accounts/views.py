@@ -65,5 +65,5 @@ def register(request):
 def password_reset_confirm(request):
     return render(request, 'password_reset_confirm.html', {"form":form})
 
-def password_reset_done(request):
-    return render (request, 'password_reset_done.html')
+# def password_reset_done(request):
+#     return render (request, 'password_reset_done.html')
