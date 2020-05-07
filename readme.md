@@ -48,6 +48,42 @@ adding a blog post which will then be visible on the live site.
 
 ## Wireframes
 ### Login(Mobile)
+![image](static/wireframes/Login(mobile).png)
+### Login(Desktop)
 ![image](static/wireframes/Login(desktop).png)
+### Register(Mobile)
+![image](static/wireframes/Register(Mobile).png)
+### Register(Dekstop)
+![image](static/wireframes/Register(Desktop).png)
+### Index(Mobile)
+![image](static/wireframes/index(mobile).png)
+### Index(Desktop)
+![image](static/wireframes/index(desktop).png)
+### all_coffee(Mobile)
+![image](static/wireframes/all_coffee(mobile).png)
+### all_coffee(Desktop)
+![image](static/wireframes/all_coffee(desktop).png)
+### coffee_review(Mobile)
+![image](static/wireframes/coffee_review(mobile).png)
+### coffee_review(Desktop)
+![image](static/wireframes/coffee_review(desktop).png)
+### blog-listings (Mobile)
+![image](static/wireframes/allblogposts(mobile).png)
+### blog-listings (Desktop)
+![image](static/wireframes/allblogposts(desktop).png)
+### blog-post (Mobile)
+![image](static/wireframes/allblogpostdetail(mobile).png)
+### blog-post (Desktop)
+![image](static/wireframes/allblogpostdetail(desktop).png)
+## add comment/review (Mobile)
+![image](static/wireframes/addreview_comment(mobile).png)
+## add comment/review (Desktop)
+![image](static/wireframes/addreview_comment(desktop).png)
+
+
+
+
+
+
 
 
