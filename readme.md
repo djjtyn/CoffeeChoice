@@ -1,4 +1,4 @@
-# MS4
+# CoffeChoice
 
 [![Build Status](https://travis-ci.org/djjtyn/ms4.svg?branch=master)](https://travis-ci.org/djjtyn/ms4)
 
@@ -10,6 +10,10 @@ All the media and static files I have stored using cloud storage by making use o
 Admin login for this site as as follows:<br>
 User:admin<br>
 password:password12345<br>
+I have coded the site so that it allows transactions to be made using a test bank card. These card details are:<br>
+Card Number: 4242424242424242<br>
+CVV: Any 3 digit number<br>
+Expiry Date: Any date in the future<br>
 The deployed site can be found here: https://coffechoice.herokuapp.com/
 
 # UX
@@ -132,6 +136,75 @@ I have made use of the Google Maps API to allow a map to be shown in the sites f
 * Django: This project uses the django framework to connect the html templates, views, urls, models and forms.
 * Python3: I have used Python a lot for this project.Python is used to redirect users to particular pages when forms are submitted or buttons are clicked making use of views and functions coded with Python in the django framework. I have also used Python to create models and forms in addition to creating tests for each django part. I have created local environment variables using python.
 * Heroku: This project has been deployed to Heroku.
+
+# Testing
+## Code Validation
+HTML Validation was done using the validator found at "https://validator.w3.org/". These tests only failed when the validator tried to validate the code used for django such as for loops and variables. All the HTML tested fine.<br>
+CSS Validation was done using the validator found at "https://jigsaw.w3.org/css-validator/". This validation test returned no errors.<br>
+Python Validation was done using the Python validator found at https://extendsclass.com/python-tester.html. This validation test returned no errors.
+
+##  Stripe
+I have tested that Stripe is taking payments effectively by using a test card whilst running Stripe in test mode. The card details I have been using are:<br>
+Number:4242424242424242<br>
+CVV: any 3 digits<br>
+Expiry: Any date in the future<br>
+These test transactions worked fine.
+
+## Coffee/Blog Posting
+I tested that the website owner could upload and edit blog and coffee posts by signing into the django admin panel and uploading new coffees and blogs which worked fine.
+
+## Comments on Blog Posts/ Reviews on Coffee Page
+I tested that the user could post comments on both the individual blog post and coffee review pages by signing in with different usernames to see if the comments were posted successfully. I saw that the comments were successfully posted with the logged in user as the comment author which was done automatically.
+
+## Page Redirects/Template Rendering
+I tested the site to make sure that the user will be directed to the appropriate page when actions are taken by the user using the site. These all tested fine.
+
+## Search Bar
+I had to test the search bar to make sure that if a user typed the name of a coffee into the search bar that this coffee would then be shown to the user. I tested this by typing a coffee name I knew existed into the searchbar and submitting the query to see if the results showed this coffee. This tested fine.<br>
+I also had to test to make sure that if there was no match for the query the user typed into the search bar, that they would be presented with a page showing there were no results found. I tested this by typing a coffee name and text that was not a coffee into the search bar to see what happened. This also tested fine.
+
+## Filters
+I had to test to make sure all the coffee filter buttons were working. I tested the all coffee filter button by clicking it and ensuring the page then showed every single coffee on the page which tested fine. I tested the Vertuo Range button by ensuring when a user clicks it that they are only shown the Verto range coffees which tested fine. I tested the Original Range button by ensuring when a user clicks it that they are only shown the Original range coffees which tested fine.
+
+## Django Testing
+I tested a lot of the code using django testing methods. These tests were done on the models, views and forms. I wasn’t able to get 100% coverage in these tests and was unsure of how to code the test files to ensure I was getting close to 100%.
+
+# Bugs
+The Travis CI build test keeps on failing. This is due to the Pillow requirement. The Travis error message shows 'Could not find a version that satisfies the requirement Pillow==7.1.1’,  but I dont want to install an earlier version of pillow in case some other aspects of the site stop working due to the earlier versions of pillow.<br>
+If the user clicks add on the coffee card when there is no number typed into the quantity area the site crashes.<br>
+RESET PASSWORD ISSUE
+
+# Deployment
+Since deploying I have changed the environment's secret key so it is not contained in any github pushes.<br>
+I have been regularly adding and committing changes to the projects local repository and pushing these to Github. I have used Gitpod entirely for coding and have been pushing any additions I make to the local repository onto Github as a precaution in case the changes didn't save in the project workspace so there are no differences between the deployed version and the development version.<br>
+I have deployed this site on Heroku. The Heroku URL for this project is :https://coffechoice.herokuapp.com/<br>
+To clone or download the code used to create the site, you can find it on github here:https://github.com/djjtyn/ms4
+choose the option to either download or clone and follow the instructions on screen. The project dependencies are boto3, botocore, dj-database-url, Django, django-forms-bootstrap, django-storages, docutils, gunicorn, jmespath, Pillow, psycopg2, pytz, s3transfer and stripe to run so these will also need to be installed by the code editor in the terminal window to run as designed.<br>
+For media and static files storage, I have used a bucket I created in Amazon S3 which stores all data in the cloud.
+
+# Credits
+## Media
+I do not own any of the rights to any of the pictures used on this website. All of the coffee pictures I got from Ebay and Amazon.<br>
+The blog pictures I got from using Google.
+
+## Content
+I have used a Nespresso coffee book to get coffee details for each coffee which I have used in the coffee listing information.
+
+## Acknowledgement
+* Amazon S3: I am using an Amazon S3 bucket to store all of the media and static files on the cloud.
+* Stack Overflow: I used a lot of information on Stack Overflow to allow me to enhance the site's functionality.
+* Code Institute: I have used a lot of code I have learned using the Code Institute full stack frameworks module.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
