@@ -7,9 +7,9 @@ For my final milestone project I have chosen to create a django ecommerce site f
 Users are able to purchase a wide range of Nespresso coffee capsules and have them delivered to their home address. Users can also leave coffee reviews for each individual coffee for other users of the site to see. The purchases are done via Stripe. 
 Included on this site is also a coffee blog which users will be able to read posts on. Users can also leave comments for each individual blog post for other users of the site to see. 
 All the media and static files I have stored using cloud storage by making use of Amazon’s S3 service. 
-Admin login for this site as as follows:
-User:admin
-password:password12345
+Admin login for this site as as follows:<br>
+User:admin<br>
+password:password12345<br>
 The deployed site can be found here: https://coffechoice.herokuapp.com/
 
 # UX
