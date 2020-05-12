@@ -3,6 +3,7 @@ from coffee.models import Coffee
 
 
 # Create your models here.
+"""Order model which has user details"""
 class Order(models.Model):
     full_name = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)
@@ -17,6 +18,7 @@ class Order(models.Model):
     def __str__(self):
         return "{0}-{1}-{2}".format(self.id, self.date, self.full_name)
 
+"""Orderline details which contain coffee details and quantities"""
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False)
     coffee = models.ForeignKey(Coffee, null=False)
