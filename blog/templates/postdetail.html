@@ -30,6 +30,7 @@
 			<a href="{% url 'all_posts' %}" class="btn btn-primary center-btn-return"><i class="fas fa-undo"></i></a>
 		</div>
 	</div>
+    <!--Blog comments section-->
 	<a class="btn btn-primary center-btn-add" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
 	<div class="comment-wrap">
 		{% for comment in comments %}

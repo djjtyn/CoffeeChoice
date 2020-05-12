@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block page_title %}Add Comment{% endblock %}
 {% block content %}
+<!--form to allow user to write a comment to be shown under the blog after submitting-->
 <div class="auth_wrapper">
 	<h1>New comment</h1>
 	<form method="POST" class="">{% csrf_token %}
