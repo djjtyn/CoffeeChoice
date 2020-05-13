@@ -40,10 +40,6 @@ body {
 
 /*NAVBAR*/
 /*Font size, cursor and color transition settings for navbar branding*/
-
-.test {
-    justify-content: flex-end;
-}
 nav {
     margin-bottom: 20px;
     width: 100%;
@@ -55,6 +51,7 @@ nav {
     cursor: pointer;
     transform: translateY(-5px);
 }
+
 
 /*color and scale changes*/
 .fa-mug-hot:hover {
@@ -252,7 +249,8 @@ footer{
     transition-timing-function: ease-in-out
 }
 
-/*Home cards and navbar fontawesome icons-Hover*/
+/*Home cards and navbar navbar headings and icons-Hover*/
+.navbar-dark .navbar-nav .nav-link:hover,
 .fa-coffee:hover,
 .fa-eye:hover,
 .fa-lock:hover,
