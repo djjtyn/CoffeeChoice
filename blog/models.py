@@ -3,7 +3,8 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 
 # Create your models here.
-"""Single blog post"""
+
+#Single blog post
 class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
@@ -16,7 +17,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
         
-"""User comment"""
+#User comment
 class Comment(models.Model):
     post = models.ForeignKey('blog.Post', on_delete=models.CASCADE, related_name='comment')
     author = models.ForeignKey(User, related_name='comment')

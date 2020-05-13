@@ -8,14 +8,14 @@ from accounts.forms import UserLoginForm, UserRegistrationForm
 
 @login_required
 def logout(request):
-    """Log the user out"""
+    #Log the user out
     auth.logout(request)
     messages.success(request, "You have successfully been logged out")
     return redirect(reverse('index'))
 
 
 def login(request):
-    """Return a login page"""
+    #Return a login page
     if request.user.is_authenticated:
         return redirect(reverse('index'))
     if request.method == "POST":
@@ -42,7 +42,7 @@ def login(request):
 
 
 def register(request):
-    """A view that manages the registration form"""
+    #A view that manages the registration form
     if request.method == 'POST':
         registration_form = UserRegistrationForm(request.POST)
         if registration_form.is_valid():
