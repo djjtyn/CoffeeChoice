@@ -2,62 +2,66 @@
 {% block page_title %}Home Page{% endblock %}
 {% block page_heading %}Home{% endblock %}
 {% block content %}
-  <h1 class="text-center">CoffeeChoice</h1>
-  <div class="row">
-    <div class="col-sm-12 slide-container">
-      <div class="slide sl-effect">
-        <img src="https://coffeechoice.s3-eu-west-1.amazonaws.com/static/img/pods.png" alt="vertuopods">
-      </div>
-      <div class="slide sl-effect">
-        <img src="https://coffeechoice.s3-eu-west-1.amazonaws.com/static/img/original_pods.png" alt="original-pods">
-      </div>
-      <div class="slide sl-effect"> 
-        <img src="https://coffeechoice.s3-eu-west-1.amazonaws.com/static/img/cappuchino.png" alt="cappuchino">
-      </div>
-      <div class="slide sl-effect">
-        <img src="https://coffeechoice.s3-eu-west-1.amazonaws.com/static/img/expresso.png" alt="expresso">
-      </div>
-    </div>
-  </div><!-- Image carousel-->
-  <div class="row">
-    <div class="col-sm-12 col-md-4">
-      <div class="card index-icons">
-        <div class="fa-index">
-          <a href="{% url 'all_coffee' %}">
-            <i class="fas fa-coffee"></i>
-          </a>
+<h1 class="text-center">CoffeeChoice</h1>
+<!--Slide show area-->
+<div class="row">
+	<div class="col-sm-12 slide-container">
+		<div class="slide sl-effect">
+			<img src="https://coffeechoice.s3-eu-west-1.amazonaws.com/static/img/pods.png" alt="vertuopods">
         </div>
-        <div class="card-body">
-          <h5 class="card-title">Coffee</h5>
-          <p class="card-text">Browse and purchase our selection of great Nespresso Coffee!</p>
+		<div class="slide sl-effect">
+			<img src="https://coffeechoice.s3-eu-west-1.amazonaws.com/static/img/original_pods.png" alt="original-pods">
         </div>
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-4">
-      <div class="card index-icons">
-        <div class="fa-index">
-        <a href="{% url 'all_posts' %}">
-          <i class="far fa-eye "></i>
-        </a>
-      </div>
-      <div class="card-body">
-    <h5 class="card-title">Coffee Blog</h5>
-    <p class="card-text">Keep up to date with our Coffee Blog!</p>
-  </div>
+		<div class="slide sl-effect">
+			<img src="https://coffeechoice.s3-eu-west-1.amazonaws.com/static/img/cappuchino.png" alt="cappuchino">
+        </div>
+		<div class="slide sl-effect">
+			<img src="https://coffeechoice.s3-eu-west-1.amazonaws.com/static/img/expresso.png" alt="expresso">
+        </div>
+	</div>	
 </div>
-    </div>
-    <div class="col-sm-12 col-md-4">
-      <div class="card index-icons">
-        <div class="fa-index">
-        <a href="https://stripe.com/ie" target="_blank">
-          <i class="fas fa-lock "></i>
-        </a>
- </div>
-  <div class="card-body">
-    <h5 class="card-title">Secure</h5>
-    <p class="card-text">We use Stripe for all payments made on the site!</p>
-  </div>
+<!--3 info Cards underneath the slideshow-->
+<div class="row">
+	<!--Card 1-->
+	<div class="col-sm-12 col-md-4">
+		<div class="card index-icons">
+			<div class="fa-index">
+				<a href="{% url 'all_coffee' %}">
+			    	<i class="fas fa-coffee"></i>
+				</a>
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">Coffee</h5>
+				<p class="card-text">Browse and purchase our selection of great Nespresso Coffee!</p>
+			</div>
+		</div>
+	</div>
+	<!--Card 2-->
+	<div class="col-sm-12 col-md-4">
+		<div class="card index-icons">
+	    	<div class="fa-index">
+				<a href="{% url 'all_posts' %}">
+				    <i class="far fa-eye "></i>
+				</a>
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">Coffee Blog</h5>
+				<p class="card-text">Keep up to date with our Coffee Blog!</p>
+			</div>
+		</div>
+	</div>
+	<!--Card 3-->
+	<div class="col-sm-12 col-md-4">
+		<div class="card index-icons">
+			<div class="fa-index">
+				<a href="https://stripe.com/ie" target="_blank">
+					<i class="fas fa-lock "></i>
+				</a>
+			</div>
+		<div class="card-body">
+			<h5 class="card-title">Secure</h5>
+			<p class="card-text">We use Stripe for all payments made on the site!</p>
+		</div>
+	</div>
 </div>
-    </div>
-  </div>
 {% endblock %}
