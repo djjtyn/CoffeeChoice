@@ -2,7 +2,7 @@ from django.test import TestCase
 from .forms import OrderForm
 
 class TestCommentForm(TestCase):
-    """test to make sure all fields in the Orderform except postcode have to be populated"""
+    #test to make sure all fields in the Orderform except postcode have to be populated
     def test_form_needs_all_fields_except_postcode_filled_to_be_valid(self):
         form = OrderForm({'full_name': '', 'phone_number': '', 'country': '', 'postcode': '', 'town_or_city':'', 
                           'street_address1': '', 'street_address2': '', 'county': ''})
@@ -15,7 +15,7 @@ class TestCommentForm(TestCase):
         self.assertEqual(form.errors['street_address2'], [u'This field is required.'])
         self.assertEqual(form.errors['county'], [u'This field is required.'])
 
-    """second test to make sure all fields in the Orderform except postcode have to be populated"""
+    #second test to make sure all fields in the Orderform except postcode have to be populated
     def test_form_doesnt_need_postcode_entered_to_be_valid(self):
         form = OrderForm({'full_name': 'test', 'phone_number': '1234', 'country': 'test', 'postcode': '', 
                           'town_or_city':'test', 'street_address1': 'test', 'street_address2': 'test', 'county': 'test'})

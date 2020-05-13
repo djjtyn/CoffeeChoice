@@ -10,7 +10,7 @@ import stripe
 
 
 # Create your views here.
-"""view to take payment and issue a message stating this or if payment fails show an error message. Login required"""
+#view to take payment and issue a message stating this or if payment fails show an error message. Login required
 @login_required()
 def checkout(request):
     stripe.api_key = settings.STRIPE_SECRET

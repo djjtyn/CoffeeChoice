@@ -4,16 +4,19 @@
 <h1 class="center-text">CoffeeChoice</h1>
 <div class="center-text">
 	<div class="row">
+        <!--Button to show all coffees in the database-->
 		<div class="col-sm-4">
 			<form action="{% url 'all_coffee' %}">
 				<button type="submit" class="btn btn-primary">All Coffee</button>
 			</form>
 		</div>
+        <!--Button to show vertuo coffees in the database-->
 		<div class="col-sm-4">
 			<form action="{% url 'filter_vertuo' %}">
 				<button type="submit" class="btn btn-primary">Vertuo Range</button>
 			</form>
 		</div>
+        <!--Button to show original coffees in the database-->
 		<div class="col-sm-4">
 			<form action="{% url 'filter_original' %}">
 				<button type="submit" class="btn btn-primary">Original Range</button>
@@ -21,20 +24,20 @@
 		</div>
 	</div>
 </div>
-
-
 <form class="search" action="{% url 'search' %}" method="get">
-	<!--Form Searchbox-->
+	<!--Searchbar to allow user to type in the name of a coffee-->
 	<div class="form-row">
 		<div class="col-sm-12">
 			<input class="form-control" type="text" placeholder="Search Coffee" name="query">
-    </div>
+        </div>
 		</div>
 		<div class="center-text">
 			<button type="submit" class="btn btn-primary">Search</button>
 		</div>
+    </div>
 </form>
 <div class="row row-flex">
+    <!--Each coffee in the database has a card showing it's picture and additional information-->
 	{% for coffee in all_coffee %}
 	<div class="col-md-4 col-sm-12">
 		<div class="card-coffee">
@@ -62,12 +65,12 @@
 	</div>
 	{% endfor %}
 </div>
+<!--Pagination-->
 {% if all_coffee.has_other_pages %}
 <div class="center-text">
 	<ul class="pagination">
 		{% if all_coffee.has_previous %}
-
-		<li><a href="?page={{ all_coffee.previous_page_number }}">&laquo;</a></li>
+        <li><a href="?page={{ all_coffee.previous_page_number }}">&laquo;</a></li>
 		{% else %}
 		<li class="disabled"><span>&laquo;</span></li>
 		{% endif %}

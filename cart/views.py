@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, reverse
 
-"""View to view cart"""
+#View to view cart
 def view_cart(request):
     return render(request, 'cart.html')
 
-"""View to add items to cart"""
+#View to add items to cart
 def add_to_cart(request, id):
     quantity = int(request.POST.get('quantity'))
     cart = request.session.get('cart',{})
@@ -13,7 +13,7 @@ def add_to_cart(request, id):
   
     return redirect(reverse('all_coffee'))
 
-"""View to amend items in cart"""
+#View to amend items in cart
 def adjust_cart(request, id):
     quantity = int(request.POST.get('quantity'))  
     cart = request.session.get('cart',{})

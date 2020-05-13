@@ -2,6 +2,7 @@
 {% block page_title %}{{ coffee.name }}{% endblock %}
 {% block content %}
 <div class="col-sm-12">
+    <!--Coffee Card-->
 	<div class="card-coffee">
 		<img src="{{MEDIA_URL}}{{ coffee.image }}" class="review-img" alt="Coffee-Capsule">
 		<div class="card-body-review center-text">
@@ -10,10 +11,10 @@
 			<h2>Intensity: {{ coffee.intensity }}</h2>
 			<h2>{{ coffee.overview }}</h2>
 			<h3><i class="fas fa-euro-sign"></i> {{ coffee.price }}</h3>
-
-		</div>
+        </div>
 		<a href="{% url 'all_coffee' %}" class="btn btn-primary"><i class="fas fa-undo"></i></a>
 	</div>
+    <!--User review area-->
 	<h1 class="center-text">Reviews</h1>
 	<a class="btn btn-primary center-btn-add" href="{% url 'add_comment_to_coffee' pk=coffee.pk %}">Add Review</a>
 	<div class="comment-wrap">

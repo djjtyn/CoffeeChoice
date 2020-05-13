@@ -3,6 +3,7 @@
 {% block content %}
 <div class="auth_wrapper">
 	<h1>Add Review</h1>
+    <!--Form to allow user to input text-->
 	<form method="POST">
 		{% csrf_token %}
 		{{ form.as_p }}
