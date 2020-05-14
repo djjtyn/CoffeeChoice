@@ -275,26 +275,25 @@ footer{
     transform: scale(1.1);
 }
 
-.fa-index {
-    text-align: center;
-    font-size: 95px;
-}
-
 /*ALL_COFFEE.HTML*/
+/*Search bar form*/
 .search {
     width: 100%;
 }
 
+/*Center aligns any text typed into search bar*/
 .search input {
     text-align: center;
 }
 
+/*All filter buttons*/
 .center-text button {
     border-radius: 33%;
     padding: 10px;
     margin: 7px;
 }
 
+/*Each coffees coffee card*/
 .card-coffee {
     margin: 25px;
     padding:15px;
@@ -303,6 +302,7 @@ footer{
     height:auto;
 }
 
+/*Image at the top of each coffee card*/
 .card-img-top {
     height: 250px;
     width: 100%;
@@ -310,6 +310,7 @@ footer{
 }
 
 /*COFFEEREVIEW.HTML*/
+/*larger coffee image than all coffee card images*/
 .review-img {
     width: 70%;
     height: 70%;
@@ -317,6 +318,7 @@ footer{
     background-color: white;
 }
 
+/*styling for the text below the coffee review img*/
 .card-body-review {
     margin-bottom: 15px;
 }
