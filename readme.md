@@ -91,6 +91,15 @@ The user cannot post a comment/review unless they are logged into the site. This
 This site allows users to register, log in, log out and reset passwords for their accounts.<br>
 The benefits for a user of signing are that the user can then purchase coffee capsules. When a user is signed they can also post coffee reviews and post blog comments.
 
+### User Purchases
+This site allows users to make purchases for coffee. The purchases are done via Stripe and the user types in their bank card which they want to use.
+
+### Cart
+This site allows users to add coffee to a virtual cart which they can choose to amend or purchase.
+
+### Blog
+This site has a blog section in which users can read posts created by the site owner. I did not allow users of the site to create a blog as I wanted this to only be an admin feature but users can post comments under each blog post oif they are signed in.
+
 ### Search Bar
 The site allows users  to search for a particular coffee capsule by making use of the search bar. The search bar allows the user to search the coffee database for a coffee which matches their search query which will then be shown below the search bar. If there are no search results the user is directed to a page showing that there have been no results for their query.
 
