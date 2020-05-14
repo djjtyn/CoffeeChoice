@@ -5,7 +5,7 @@
 # Overview
 For my final milestone project I have chosen to create a django ecommerce site for Nespresso coffee pods.<br> 
 Users are able to purchase a wide range of Nespresso coffee capsules and have them delivered to their home address. Users can also leave coffee reviews for each individual coffee for other users of the site to see. The purchases are done via Stripe.<br>
-Included on this site is also a coffee blog which users will be able to read posts on. Users can also leave comments for each individual blog post for other users of the site to see.<br> 
+Included on this site is also a coffee blog which publishes blog posts made by the site owner which users will be able to read posts on. Users can also leave comments for each individual blog post for other users of the site to see.<br> 
 All the media and static files I have stored using cloud storage by making use of Amazon’s S3 service.<br> 
 Admin login for this site as as follows:<br>
 User:admin<br>
@@ -124,6 +124,10 @@ All the static files are also stored in the bucket.
 
 ### Google Maps API
 I have made use of the Google Maps API to allow a map to be shown in the sites footer. This map marks the company's location with a marker.
+
+## Future Features
+### User Purchase History
+A user purchase history page could be added to the site as a future feature. This will allow the logged in user to see which coffees they had purchased previously. I started coding this application but didn't get enough time to finish the code for it.
 
 # Technologies Used
 * HTML: This project uses HTML to provide the structure of the page.
