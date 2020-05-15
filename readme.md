@@ -156,6 +156,9 @@ HTML Validation was done using the validator found at "https://validator.w3.org/
 CSS Validation was done using the validator found at "https://jigsaw.w3.org/css-validator/". This validation test returned no errors.<br>
 Python Validation was done using the Python validator found at https://extendsclass.com/python-tester.html. This validation test returned no errors.
 
+##  Responsive Design
+I have ensure that the site works well on all screen sizes by making use of the Bootstrap grid system. I have tested this using Google Dev tools and checked what the site looks like on screens of different sizes.
+
 ##  Stripe
 I have tested that Stripe is taking payments effectively by using a test card whilst running Stripe in test mode. The card details I have been using are:<br>
 Number:4242424242424242<br>
@@ -185,7 +188,9 @@ I tested a lot of the code using django testing methods. These tests were done o
 # Bugs
 The Travis CI build test keeps on failing. This is due to the Pillow requirement. The Travis error message shows 'Could not find a version that satisfies the requirement Pillow==7.1.1’,  but I dont want to install an earlier version of pillow in case some other aspects of the site stop working due to the earlier versions of pillow.<br>
 If the user clicks add on the coffee card when there is no number typed into the quantity area the site crashes.<br>
-RESET PASSWORD ISSUE
+If the user attempts to purchase something when their cart has less than 50c worth of items in it the site crashes.<br>
+The password reset email is not being sent.<br>
+I have not come across any other bugs in the code yet.
 
 # Deployment
 Since deploying I have changed the environment's secret key so it is not contained in any github pushes.<br>
