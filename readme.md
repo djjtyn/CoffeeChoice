@@ -76,13 +76,14 @@ adding a blog post which will then be visible on the live site.
 ![image](static/wireframes/addreview_comment(mobile).png)
 ## Add comment/review (Desktop)
 ![image](static/wireframes/addreview_comment(desktop).png)
+<br>
 For the background image I chose a colour which I thought represented the colour of coffee mixing with milk. I used this colour as I thought it to be very fitting to the theme of the site.<br>
 When the user hovers over each headings icon in the navbar, the icon colour changes to a yellow colour. I chose yellow due to the cart quantity number being yellow as well. The navbar branding changes to a blue colour when hovered over to distinguish this from the other navbar options.<br>
 I chose a black background for the authorisation forms as I thought it clearly distinguishes where on the page the form is. I decided to center these forms to allow it to be easier for the user to see where they have to input their information.<br>
 Each coffee and blog are contained within cards. These cards have their own background colour which is similar to the main background colour except it's reversed to show the lighter colour on top. I chose to do this as I thought it clearly separated each card's containment area from the background.<br>
 For the coffee cards, I chose to show 9 cards at a time when they are shown on the all_coffee page. This was so the page wouldn’t appear too crowded and I have coded pagination buttons to allow the user to go to the previous and next pages which then show another 9 coffee cards when available.<br>
-I have enabled four filters on the all_coffee page to filter the coffees. Three of these filters are buttons showing either the full selection of coffees, the original range of coffees or the vertuo range of coffees. I decided to use buttons for this as it makes the site more interactive for the user. The fourth filter is a search filter which is an input field which allows the user to type in the name of a coffee. If there are no results for the query a page is showing to the user stating there were no matches found for their search.<br>
-The Coffee review pages show a bigger version of whichever card was clicked on to show the review for. There is an add review button below this which when the user clicks on they are taken to a page with a large text area in which they can type text. If there are no reviews yet on the page the user will see the default text ‘be the first to add a review’ which should hopefully entice the user to click the add review button to populate the review area. Once there is a review left this default text is removed and in place will be the reviews which have been left by the user. The layout structure of the review is the time the comment left at the top, followed by the name of the user that posted the review and the review itself below this. I chose this layout as I thought it looked like a good way of presenting the information. This is the same layout as the blog post comments section of the site.<br> 
+I have enabled four filters on the all_coffee page to filter the coffees. Three of these filters are buttons showing either the full selection of coffees, the original range of coffees or the vertuo range of coffees. I decided to use buttons for this as it makes the site more interactive for the user. The fourth filter is a search filter which is an input field which allows the user to type in the name of a coffee. If there are no results for the query the user is directed to a page which shows that there were no matches found for their search.<br>
+The Coffee review pages show a bigger version of whichever card was clicked on to show the review for. There is an add review button below this which when the user clicks on they are taken to a page with a large text area in which they can type text. If there are no reviews yet on the page the user will see the default text ‘be the first to add a review’ which should hopefully entice the user to click the add review button to populate the review area. Once there is a review left this default text is removed and in place will be the reviews which have been left by the user. The layout structure of the review is the time the comment was posted at the top, followed by the name of the user that posted the review and the review itself below this. I chose this layout as I thought it looked like a good way of presenting the information. This is the same layout as the blog post comments section of the site.<br> 
 The user cannot post a comment/review unless they are logged into the site. This is so that the comment will automatically pick up the users username to populate their review with. 
 
 # Features
@@ -98,10 +99,13 @@ This site allows users to make purchases for coffee. The purchases are done via 
 This site allows users to add coffee to a virtual cart which they can choose to amend or purchase.
 
 ### Blog
-This site has a blog section in which users can read posts created by the site owner. I did not allow users of the site to create a blog as I wanted this to only be an admin feature but users can post comments under each blog post oif they are signed in.
+This site has a blog section in which users can read posts created by the site owner. I did not allow users of the site to create a blog as I wanted this to only be an admin feature, but users can post comments under each blog post if they are signed in.
+
+### Coffee Reviews
+The site has a review page for every coffee in the database. Users can leave their own reviews in this section of the site or read reviews left by other users of the site.
 
 ### Search Bar
-The site allows users  to search for a particular coffee capsule by making use of the search bar. The search bar allows the user to search the coffee database for a coffee which matches their search query which will then be shown below the search bar. If there are no search results the user is directed to a page showing that there have been no results for their query.
+The search bar allows the user to search the coffee database for a coffee which matches their search query which will then be shown below the search bar. If there are no search results the user is directed to a page showing that there have been no results for their query.
 
 ### Filters
 There are two different coffee types available for purchase on the site. These are Vertuo and Original ranges.<br>
@@ -120,7 +124,7 @@ By clicking the 'register' heading the user is taken to a page which contains a 
 When a user is logged in all the headings remain the same except for the login and register headings which are removed. In place of these is a logout heading which when clicked will log the user out of their session.
 
 ### Admin Features
-When logged into an admin account, the admin can add/edit coffees and blogs shown by going navigating to the django admin section. 
+When logged into an admin account, the admin can add/edit coffees and blogs shown by navigating to the django admin section and doing it from there once logged in. 
 
 ### User Features
 When a user is logged in they can post comments on both the coffee review pages and blog posts.<br>
@@ -144,7 +148,8 @@ A user purchase history page could be added to the site as a future feature. Thi
 * Bootstrap: I have used bootstrap in this project to help provide further structure to the page and aid the responsive design aspect of the site.
 * Amazon S3: This project makes use of Amazon S3 to store data such as media and static files in the cloud.
 * Font Awesome: I have made use of FontAwesome to attain some of the icons used for the project.
-* JQuery: I have made use of jQuery in this project. I have used this for the coding of the calendar which is shown when the user selects the release date field from the add review form. I have also used it for the coding of the options available for the platform, multiplayer and rating options found within the add review form to ensure the options stay on screen once the user clicks on the drop down menu. JQuery is also used to simplify DOM manipulation.
+* JQuery: I have made use of jQuery in this project.
+* Javascript: I have made use of Javascript in this project.
 * Google Maps API: This project makes use of the Google Maps API to show the location of the business in the sites footer.
 * Django: This project uses the django framework to connect the html templates, views, urls, models and forms.
 * Python3: I have used Python a lot for this project.Python is used to redirect users to particular pages when forms are submitted or buttons are clicked making use of views and functions coded with Python in the django framework. I have also used Python to create models and forms in addition to creating tests for each django part. I have created local environment variables using python.
@@ -157,7 +162,7 @@ CSS Validation was done using the validator found at "https://jigsaw.w3.org/css-
 Python Validation was done using the Python validator found at https://extendsclass.com/python-tester.html. This validation test returned no errors.
 
 ##  Responsive Design
-I have ensure that the site works well on all screen sizes by making use of the Bootstrap grid system. I have tested this using Google Dev tools and checked what the site looks like on screens of different sizes.
+I have ensured that the site works well on all screen sizes by making use of the Bootstrap grid system. I have tested this using Google Dev tools and checked what the site looks like on screens of different sizes.
 
 ##  Stripe
 I have tested that Stripe is taking payments effectively by using a test card whilst running Stripe in test mode. The card details I have been using are:<br>
@@ -167,10 +172,10 @@ Expiry: Any date in the future<br>
 These test transactions worked fine.
 
 ## Coffee/Blog Posting
-I tested that the website owner could upload and edit blog and coffee posts by signing into the django admin panel and uploading new coffees and blogs which worked fine.
+I tested that the website owner can upload and edit blog and coffee posts by signing into the django admin panel and uploading new coffees and blogs which worked fine.
 
 ## Comments on Blog Posts/ Reviews on Coffee Page
-I tested that the user could post comments on both the individual blog post and coffee review pages by signing in with different usernames to see if the comments were posted successfully. I saw that the comments were successfully posted with the logged in user as the comment author which was done automatically.
+I tested that the user can post comments on both the individual blog post and coffee review pages by signing in with different usernames to see if the comments were posted successfully. I saw that the comments were successfully posted with the logged in user as the comment author.
 
 ## Page Redirects/Template Rendering
 I tested the site to make sure that the user will be directed to the appropriate page when actions are taken by the user using the site. These all tested fine.
@@ -180,7 +185,7 @@ I had to test the search bar to make sure that if a user typed the name of a cof
 I also had to test to make sure that if there was no match for the query the user typed into the search bar, that they would be presented with a page showing there were no results found. I tested this by typing a coffee name and text that was not a coffee into the search bar to see what happened. This also tested fine.
 
 ## Filters
-I had to test to make sure all the coffee filter buttons were working. I tested the all coffee filter button by clicking it and ensuring the page then showed every single coffee on the page which tested fine. I tested the Vertuo Range button by ensuring when a user clicks it that they are only shown the Verto range coffees which tested fine. I tested the Original Range button by ensuring when a user clicks it that they are only shown the Original range coffees which tested fine.
+I had to test to make sure all the coffee filter buttons were working. I tested the all coffee filter button by clicking it and ensuring the page then showed every single coffee in the coffee database which tested fine. I tested the Vertuo Range button by ensuring when a user clicks it that they are only shown the Verto range coffees which tested fine. I tested the Original Range button by ensuring when a user clicks it that they are only shown the Original range coffees which tested fine.
 
 ## Django Testing
 I tested a lot of the code using django testing methods. These tests were done on the models, views and forms. I wasn’t able to get 100% coverage in these tests and was unsure of how to code the test files to ensure I was getting close to 100%.
