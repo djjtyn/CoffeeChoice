@@ -153,6 +153,7 @@ A user purchase history page could be added to the site as a future feature. Thi
 * Google Maps API: This project makes use of the Google Maps API to show the location of the business in the sites footer.
 * Django: This project uses the django framework to connect the html templates, views, urls, models and forms.
 * Python3: I have used Python a lot for this project.Python is used to redirect users to particular pages when forms are submitted or buttons are clicked making use of views and functions coded with Python in the django framework. I have also used Python to create models and forms in addition to creating tests for each django part. I have created local environment variables using python.
+* Travis: I have used Travis CI to test the projects code
 * Heroku: This project has been deployed to Heroku.
 
 # Testing
@@ -190,11 +191,13 @@ I had to test to make sure all the coffee filter buttons were working. I tested 
 ## Django Testing
 I tested a lot of the code using django testing methods. These tests were done on the models, views and forms. I wasn’t able to get 100% coverage in these tests and was unsure of how to code the test files to ensure I was getting close to 100%.
 
+## Travis CI
+I have used Travis CI to test the projects code.
+
 # Bugs
-The Travis CI build test keeps on failing. This is due to the Pillow requirement. The Travis error message shows 'Could not find a version that satisfies the requirement Pillow==7.1.1’,  but I dont want to install an earlier version of pillow in case some other aspects of the site stop working due to the earlier versions of pillow.<br>
 If the user clicks add on the coffee card when there is no number typed into the quantity area the site crashes.<br>
-If the user attempts to purchase something when their cart has less than 50c worth of items in it the site crashes.<br>
-The password reset email is not being sent.<br>
+If the user attempts to purchase something when their cart has less than 50c worth of items in it the site crashes. This is due to Stripe requiring the amount to be at least €0.50 eur in order to process a payment.<br>
+The password reset email is not being sent. This is due to compatibility issues between the versions of Django and Python I have in the project. <br>
 I have not come across any other bugs in the code yet.
 
 # Deployment
