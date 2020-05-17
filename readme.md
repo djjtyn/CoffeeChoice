@@ -195,7 +195,6 @@ I tested a lot of the code using django testing methods. These tests were done o
 I have used Travis CI to test the projects code.
 
 # Bugs
-If the user clicks add on the coffee card when there is no number typed into the quantity area the site crashes.<br>
 If the user attempts to purchase something when their cart has less than 50c worth of items in it the site crashes. This is due to Stripe requiring the amount to be at least €0.50 eur in order to process a payment.<br>
 The password reset email is not being sent. This is due to compatibility issues between the versions of Django and Python I have in the project. <br>
 I have not come across any other bugs in the code yet.
