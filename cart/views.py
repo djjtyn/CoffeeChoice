@@ -10,7 +10,6 @@ def add_to_cart(request, id):
     cart = request.session.get('cart',{})
     cart[id] = cart.get(id, 0) + quantity
     request.session['cart'] = cart
-  
     return redirect(reverse('all_coffee'))
 
 #View to amend items in cart

@@ -18,7 +18,7 @@
 				<form action="{% url 'adjust_cart' item.id %}" method="post">
 					{% csrf_token%}
 					<div class="input-group">
-						<input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
+						<input name="quantity" type="number" min="1" max="999" class="form-control" value="1">
 						<span class="input-group-btn">
                             <button class="btn btn-success" type="submit">Amend</button>
                         </span>
